@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Project jaringan 2</string>
+
+    <string-array name="data_menu">
+        <item>Router</item>
+        <item>LAN Card</item>
+        <item>WLAN Card</item>
+        <item>Access Point</item>
+        <item>Kabel Jaringan</item>
+        <item>Switch</item>
+    </string-array>
+
+    <string-array name="data_des">
+        <item> Router adalah sebuah alat untuk mengirimkan paket data melalui jaringan atau internet untuk dapat menuju tujuannya, proses tersebut dinamakan routing. Proses routing itu sendiri terjadi pada lapisan 3 dari stack protokol tujuh-lapis OSI.</item>
+        <item> LAN Card (Local Area Network)adalah salah satu perangkat antar muka dalam jaringan komputer untuk menghubungkan komputer dengan perangkat jaringan lainnya menggunakan kabel.</item>
+        <item> WLAN Card (Wireless Local Area Network) card merupakan sebuah kartu yang berfungsi sebagai jembatan dari suatu komputer ke sebuah jaringan komputer.</item>
+        <item> Access Point adalah sebuah perangkat jaringan yang berisi sebuah transceiver dan antena untuk transmisi dan menerima sinyal ke dan dari clients remote.</item>
+        <item> Definisi kabel jaringan /UTP adalah suatu jenis kabel yang dapat dipakai untuk membuat jaringan komputer, berupa kabel yang di bagian dalamnya berisikan 4 pasang kabel.</item>
+        <item> Switch adalah pengalih jaringan atau sebuah alat yang menjalankan penghubung tidak terlihat penghubung penyekat (segmentation) dari banyak jaringan dengan mengalihkan dengan melihat alamat MAC.</item>
+    </string-array>
+
+    <array name="data_gambar">
+        <item>@drawable/rt</item>
+        <item>@drawable/lc</item>
+        <item>@drawable/wc</item>
+        <item>@drawable/ap</item>
+        <item>@drawable/kj</item>
+        <item>@drawable/sw</item>
+    </array>
+
+    <string-array name="data_pengertian">
+        <item> Router adalah sebuah alat untuk mengirimkan paket data melalui jaringan atau internet untuk dapat menuju tujuannya, proses tersebut dinamakan routing.</item>
+        <item> LAN Card adalah sebuah kartu yang berfungsi sebagai jembatan dari komputer ke sebuah jaringan komputer.</item>
+        <item> WLAN Card adalah pengontrol antarmuka jaringan yang menghubungkan ke jaringan komputer berbasis radio nirkabel, daripada jaringan kabel, seperti Token Ring atau Ethernet.</item>
+        <item> Access Point adalah suatu peranti yang memungkinkan peranti nirkabel untuk terhubung ke dalam jaringan dengan menggunakan Wi-Fi, Bluetooth, atau standar lain.</item>
+        <item> Kabel Jaringan Kabel jaringan adalah perangkat keras jaringan yang digunakan untuk menghubungkan satu perangkat jaringan ke perangkat jaringan lain atau untuk menghubungkan dua atau lebih komputer untuk berbagi printer, pemindai, dll.</item>
+        <item> Switch Switch adalah pengalih jaringan atau sebuah alat yang menjalankan penghubung tidak terlihat penghubung penyekat (segmentation) dari banyak jaringan dengan mengalihkan dengan melihat alamat MAC
+            .</item>
+    </string-array>
+
+    <string-array name="data_fungsi">
+        <item> Router adalah .</item>
+        <item> LAN Card (Local Area Network)adalah .</item>
+        <item> WLAN Card (Wireless Local Area Network) .</item>
+        <item> Access Point adalah.</item>
+        <item> Definisi kabel jaringan /UTP adalah .</item>
+        <item> Switch adalah pengalih jaringan atau .</item>
+    </string-array>
+
+    <string-array name="cara_kerja">
+        <item> Router adalah sebuah alat untuk mengirimkan paket data melalui jaringan atau internet untuk dapat menuju tujuannya, proses tersebut dinamakan routing. Proses routing itu sendiri terjadi pada lapisan 3 dari stack protokol tujuh-lapis OSI.</item>
+        <item> LAN Card (Local Area Network)adalah salah satu perangkat antar muka dalam jaringan komputer untuk menghubungkan komputer dengan perangkat jaringan lainnya menggunakan kabel.</item>
+        <item> WLAN Card (Wireless Local Area Network) card merupakan sebuah kartu yang berfungsi sebagai jembatan dari suatu komputer ke sebuah jaringan komputer.</item>
+        <item> Access Point adalah sebuah perangkat jaringan yang berisi sebuah transceiver dan antena untuk transmisi dan menerima sinyal ke dan dari clients remote.</item>
+        <item> Definisi kabel jaringan /UTP adalah suatu jenis kabel yang dapat dipakai untuk membuat jaringan komputer, berupa kabel yang di bagian dalamnya berisikan 4 pasang kabel.</item>
+        <item> Switch adalah pengalih jaringan atau sebuah alat yang menjalankan penghubung tidak terlihat penghubung penyekat (segmentation) dari banyak jaringan dengan mengalihkan dengan melihat alamat MAC.</item>
+    </string-array>
+
+    <string-array name="harga">
+        <item> Harga Pasar Rp.100.000</item>
+        <item> Harga Pasar Rp.200.000</item>
+        <item> Harga Pasar Rp.300.000</item>
+        <item> Harga Pasar Rp.400.000</item>
+        <item> Harga Pasar Rp.500.000</item>
+        <item> Harga Pasar Rp.600.000</item>
+    </string-array>
+
+
+</resources>
