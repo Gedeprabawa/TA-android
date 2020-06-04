@@ -2,17 +2,17 @@ package com.example.projectjaringan;
 
 public class Menu {
 
-    private int gambar;
+    private String gambar;
     private String nama;
     private String deskripsi;
 
-    public Menu(int datagambar, String datanama,String datadeskripsi){
+    public Menu( String datanama, String datagambar, String datadeskripsi ){
         gambar = datagambar;
         nama = datanama;
         deskripsi = datadeskripsi;
     }
 
-    public int getGambar() {
+    public String getGambar() {
         return gambar;
     }
 

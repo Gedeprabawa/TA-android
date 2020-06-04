@@ -14,13 +14,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:id="@+id/img_menu"
+            android:id="@+id/imgmenu"
             android:src="@mipmap/ic_launcher"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_menu"
+            android:id="@+id/tvmenu"
             android:text="Menu"
             android:layout_gravity="center"
             android:textSize="20sp"
@@ -29,7 +29,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_deskripsi"
+            android:id="@+id/tvdeskripsi"
             android:text="Deskripsi"
             android:textSize="18sp"
             android:maxLines="5"/>

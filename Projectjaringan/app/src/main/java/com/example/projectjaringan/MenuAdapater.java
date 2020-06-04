@@ -8,17 +8,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
-
 import java.util.ArrayList;
 
 
 public class MenuAdapater extends RecyclerView.Adapter<MenuAdapater.MenuViewHolder> {
-
 
     private Context context;
     private ArrayList<Menu> menus;
@@ -39,7 +35,7 @@ public class MenuAdapater extends RecyclerView.Adapter<MenuAdapater.MenuViewHold
     @Override
     public void onBindViewHolder(@NonNull MenuViewHolder holder, int position) {
         Menu menubaru = menus.get(position);
-        int gambarbaru = menubaru.getGambar();
+        String  gambarbaru = menubaru.getGambar();
         String namabaru = menubaru.getNama();
         String deskripsibaru = menubaru.getDeskripsi();
 
@@ -63,9 +59,9 @@ public class MenuAdapater extends RecyclerView.Adapter<MenuAdapater.MenuViewHold
         public TextView tvdatades;
         public MenuViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivdataimg = itemView.findViewById(R.id.img_menu);
-            tvdatanama = itemView.findViewById(R.id.tv_menu);
-            tvdatades = itemView.findViewById(R.id.tv_deskripsi);
+            ivdataimg = itemView.findViewById(R.id.imgmenu);
+            tvdatanama = itemView.findViewById(R.id.tvmenu);
+            tvdatades = itemView.findViewById(R.id.tvdeskripsi);
 
 
         }
