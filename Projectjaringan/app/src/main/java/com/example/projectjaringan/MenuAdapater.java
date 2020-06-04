@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -16,6 +17,16 @@ public class MenuAdapater extends RecyclerView.Adapter<MenuAdapater.MenuViewHold
 
     private Context context;
     private ArrayList<Menu> menus;
+    private  OnItemClickListener mClick;
+
+    public interface OnItemClickListener{
+        void onItemclick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mClick=listener;
+    }
+
     public MenuAdapater(Context mcontext, ArrayList<Menu> menujar){
         context= mcontext;
         menus= menujar;
@@ -54,13 +65,26 @@ public class MenuAdapater extends RecyclerView.Adapter<MenuAdapater.MenuViewHold
         public ImageView ivdataimg;
         public TextView tvdatanama;
         public TextView tvdatades;
+        public Button btninfo;
 
         public MenuViewHolder(@NonNull View itemView) {
             super(itemView);
             ivdataimg =itemView.findViewById(R.id.img_menu);
             tvdatanama =itemView.findViewById(R.id.tv_nama);
             tvdatades =itemView.findViewById(R.id.tv_deskripsi);
+            btninfo =itemView.findViewById(R.id.infodetail);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mClick != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            mClick.onItemclick(position);
+                        }
+                    }
+                }
+            });
 
         }
     }

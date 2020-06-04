@@ -3,6 +3,8 @@ package com.example.projectjaringan;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.os.Bundle;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -15,7 +17,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MenuAdapater.OnItemClickListener {
+    public static final String EXTRA_IMG = "gambar";
+    public static final String EXTRA_NAMA = "nama";
+    public static final String EXTRA_DESKRIPSI = "deskripsi";
+
     private MenuAdapater menuAdapater;
     private RecyclerView recyclerView;
     private ArrayList<Menu> menus;
@@ -53,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
                             }
                             menuAdapater =new MenuAdapater(MainActivity.this, menus);
                             recyclerView.setAdapter(menuAdapater);
+
+                            menuAdapater.setOnItemClickListener(MainActivity.this);
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -66,5 +75,15 @@ public class MainActivity extends AppCompatActivity {
          requestQueue.add(request);
     }
 
+    @Override
+    public void onItemclick(int position) {
+        Intent intentdetail = new Intent(this, DetailActivity.class);
+        Menu clickitem = menus.get(position);
+        intentdetail.putExtra(EXTRA_IMG, clickitem.getGambar());
+        intentdetail.putExtra(EXTRA_NAMA, clickitem.getNama());
+        intentdetail.putExtra(EXTRA_DESKRIPSI, clickitem.getDeskripsi());
+
+        startActivity(intentdetail);
+    }
 }
 
