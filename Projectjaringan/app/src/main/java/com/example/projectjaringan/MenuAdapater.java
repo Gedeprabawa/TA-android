@@ -1,11 +1,9 @@
 package com.example.projectjaringan;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,7 +19,6 @@ public class MenuAdapater extends RecyclerView.Adapter<MenuAdapater.MenuViewHold
     public MenuAdapater(Context mcontext, ArrayList<Menu> menujar){
         context= mcontext;
         menus= menujar;
-
     }
 
     @NonNull
@@ -34,13 +31,13 @@ public class MenuAdapater extends RecyclerView.Adapter<MenuAdapater.MenuViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MenuViewHolder holder, int position) {
-        Menu menubaru = menus.get(position);
-        String  gambarbaru = menubaru.getGambar();
-        String namabaru = menubaru.getNama();
-        String deskripsibaru = menubaru.getDeskripsi();
+            Menu menubaru= menus.get(position);
+            String gambarbaru= menubaru.getGambar();
+            String nama= menubaru.getNama();
+            String deskripsi= menubaru.getDeskripsi();
 
-        holder.tvdatanama.setText(namabaru);
-        holder.tvdatades.setText(deskripsibaru);
+            holder.tvdatanama.setText(nama);
+            holder.tvdatades.setText(deskripsi);
         Glide
                 .with(context)
                 .load(gambarbaru)
@@ -57,11 +54,12 @@ public class MenuAdapater extends RecyclerView.Adapter<MenuAdapater.MenuViewHold
         public ImageView ivdataimg;
         public TextView tvdatanama;
         public TextView tvdatades;
+
         public MenuViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivdataimg = itemView.findViewById(R.id.imgmenu);
-            tvdatanama = itemView.findViewById(R.id.tvmenu);
-            tvdatades = itemView.findViewById(R.id.tvdeskripsi);
+            ivdataimg =itemView.findViewById(R.id.img_menu);
+            tvdatanama =itemView.findViewById(R.id.tv_nama);
+            tvdatades =itemView.findViewById(R.id.tv_deskripsi);
 
 
         }

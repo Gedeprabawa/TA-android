@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Project jaringan 2</string>
+    <string name="app_name">Project jaringan </string>
 
     <string-array name="data_menu">
         <item>Router</item>

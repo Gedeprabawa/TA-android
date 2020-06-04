@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView=findViewById(R.id.list);
+        recyclerView=findViewById(R.id.rv_list);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager( new LinearLayoutManager(this));
         menus= new ArrayList<>();
@@ -38,20 +38,20 @@ public class MainActivity extends AppCompatActivity {
 
     private void parseJSON() {
         String urlweb ="https://tudeastha.000webhostapp.com/koneksi.php";
-        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, urlweb, null,
+        JsonArrayRequest request =new JsonArrayRequest(Request.Method.GET, urlweb, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
-                        jumdata = response.length();
+                        jumdata =response.length();
                         try {
                             for (int i = 0; i < jumdata; i++) {
                                 JSONObject data =response.getJSONObject(i);
-                                String gambarmenu = data.getString("gambar");
-                                String namamenu = data.getString("nama");
-                                String deksripsimenu = data.getString("deskripsi");
+                                String gambarmenu =data.getString("gambar");
+                                String namamenu =data.getString("nama");
+                                String deksripsimenu =data.getString("deskripsi");
                                 menus.add(new Menu( namamenu,  gambarmenu, deksripsimenu));
                             }
-                            menuAdapater = new MenuAdapater(MainActivity.this, menus);
+                            menuAdapater =new MenuAdapater(MainActivity.this, menus);
                             recyclerView.setAdapter(menuAdapater);
                         } catch (JSONException e) {
                             e.printStackTrace();
