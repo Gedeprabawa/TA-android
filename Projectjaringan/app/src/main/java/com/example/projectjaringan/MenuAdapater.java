@@ -72,9 +72,9 @@ public class MenuAdapater extends RecyclerView.Adapter<MenuAdapater.MenuViewHold
             ivdataimg =itemView.findViewById(R.id.img_menu);
             tvdatanama =itemView.findViewById(R.id.tv_nama);
             tvdatades =itemView.findViewById(R.id.tv_deskripsi);
-            btninfo =itemView.findViewById(R.id.infodetail);
+            btninfo =itemView.findViewById(R.id.btn_detail);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+            btninfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (mClick != null) {
