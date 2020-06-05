@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity implements MenuAdapater.OnIt
     public static final String EXTRA_IMG = "gambar";
     public static final String EXTRA_NAMA = "nama";
     public static final String EXTRA_DESKRIPSI = "deskripsi";
+    public static final String EXTRA_HARGA = "harga";
+    public static final String EXTRA_FUNGSI = "fungsi";
+    public static final String EXTRA_CARA = "cara_kerja";
 
     private MenuAdapater menuAdapater;
     private RecyclerView recyclerView;
@@ -55,7 +58,10 @@ public class MainActivity extends AppCompatActivity implements MenuAdapater.OnIt
                                 String gambarmenu =data.getString("gambar");
                                 String namamenu =data.getString("nama");
                                 String deksripsimenu =data.getString("deskripsi");
-                                menus.add(new Menu( namamenu,  gambarmenu, deksripsimenu));
+                                String harga =data.getString("harga");
+                                String fungsi =data.getString("fungsi");
+                                String caraker =data.getString("cara_kerja");
+                                menus.add(new Menu( namamenu,  gambarmenu, deksripsimenu, harga, fungsi, caraker));
                             }
                             menuAdapater =new MenuAdapater(MainActivity.this, menus);
                             recyclerView.setAdapter(menuAdapater);
@@ -82,6 +88,9 @@ public class MainActivity extends AppCompatActivity implements MenuAdapater.OnIt
         intentdetail.putExtra(EXTRA_IMG, clickitem.getGambar());
         intentdetail.putExtra(EXTRA_NAMA, clickitem.getNama());
         intentdetail.putExtra(EXTRA_DESKRIPSI, clickitem.getDeskripsi());
+        intentdetail.putExtra(EXTRA_HARGA, clickitem.getHarga());
+        intentdetail.putExtra(EXTRA_FUNGSI, clickitem.getFungsi());
+        intentdetail.putExtra(EXTRA_CARA, clickitem.getCarakerja());
 
         startActivity(intentdetail);
     }
